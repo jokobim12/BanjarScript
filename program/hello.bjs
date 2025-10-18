@@ -1,0 +1,7 @@
+wadah angka = [1, 2, 3];
+fungsi cetakBerataan(data) {
+  gasan (wadah i = 0; i < data.length; i = i + 1) {
+    tampaiakan("Data ke", i, "=", data[i]);
+  }
+}
+cetakBerataan(angka);

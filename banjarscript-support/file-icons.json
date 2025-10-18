@@ -1,0 +1,10 @@
+{
+  "iconDefinitions": {
+    "banjarscript-icon": {
+      "iconPath": "./banjarscript-icon.png"
+    }
+  },
+  "fileExtensions": {
+    "bjs": "banjarscript-icon"
+  }
+}

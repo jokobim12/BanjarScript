@@ -1,0 +1,29 @@
+{
+  "name": "BanjarScript",
+  "fileTypes": ["bjs"],
+  "scopeName": "source.banjarscript",
+  "patterns": [
+    {
+      "name": "keyword.control.banjarscript",
+      "match": "\\b(wadah|konstanta|fungsi|balikan|bulikakan|mun|nanglain|gasan|munkada|selagi|bujur|salah|dan|atau|bukan|tampaiakan|tampilkan)\\b"
+    },
+    {
+      "name": "string.quoted.double.banjarscript",
+      "begin": "\"",
+      "end": "\""
+    },
+    {
+      "name": "constant.numeric.banjarscript",
+      "match": "\\b\\d+(\\.\\d+)?\\b"
+    },
+    {
+      "name": "comment.line.double-slash.banjarscript",
+      "begin": "//",
+      "end": "$"
+    },
+    {
+      "name": "entity.name.function.banjarscript",
+      "match": "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\s*(?=\\()"
+    }
+  ]
+}

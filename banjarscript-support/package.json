@@ -1,0 +1,35 @@
+{
+  "name": "banjarscript-support",
+  "displayName": "banjarscript-support",
+  "description": "",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.105.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "banjarscript",
+      "aliases": ["BanjarScript", "banjarscript"],
+      "extensions": [".bjs"],
+      "configuration": "./language-configuration.json"
+    }],
+   "grammars": [
+  {
+    "language": "banjarscript",
+    "scopeName": "source.banjarscript",
+    "path": "./syntaxes/banjarscript.tmLanguage.json"
+  }
+],
+"iconThemes": [
+  {
+    "id": "banjarscript-icons",
+    "label": "BanjarScript File Icons",
+    "path": "./file-icons.json"
+  }
+]
+
+  }
+}

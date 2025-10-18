@@ -1,0 +1,21 @@
+{
+  "name": "banjarscript",
+  "icon": "banjarscript-icon.png",
+  "version": "1.0.0",
+  "description": "Bahasa Banjar berbasis JavaScript (transpiler + CLI)",
+  "type": "module",
+  "bin": {
+    "banjarscript": "./bin/banjarscript.js"
+  },
+  "exports": {
+    ".": "./lib/transpile.js"
+  },
+  "keywords": ["banjar", "language", "transpiler", "cli", "education"],
+  "author": "Nama Kamu",
+  "license": "MIT",
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "test": "node bin/banjarscript.js examples/fitur.bjs",
+    "emit": "node bin/banjarscript.js --emit-js examples/fitur.bjs > out.js && node out.js"
+  }
+}
