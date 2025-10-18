@@ -10,12 +10,23 @@
   "exports": {
     ".": "./lib/transpile.js"
   },
-  "keywords": ["banjar", "language", "transpiler", "cli", "education"],
+  "keywords": [
+    "banjar",
+    "language",
+    "transpiler",
+    "cli",
+    "education"
+  ],
   "author": "Nama Kamu",
   "license": "MIT",
-  "engines": { "node": ">=18" },
+  "engines": {
+    "node": ">=18"
+  },
   "scripts": {
     "test": "node bin/banjarscript.js examples/fitur.bjs",
     "emit": "node bin/banjarscript.js --emit-js examples/fitur.bjs > out.js && node out.js"
+  },
+  "dependencies": {
+    "readline-sync": "^1.4.10"
   }
 }
