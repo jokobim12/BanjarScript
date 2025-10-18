@@ -1,11 +1,11 @@
-# 🦧 BanjarScript
+# BanjarScript
 
 Bahasa pemrograman *eksperimental* berbasis JavaScript.  
 Tulis kode dengan kata kunci Banjar, jalankan via CLI seperti bahasa modern!
 
 ---
 
-## 🧩 Daftar Kata Kunci BanjarScript
+## Daftar Kata Kunci BanjarScript
 
 | BanjarScript                   | JavaScript      | Keterangan                         |
 |--------------------------------|----------------|------------------------------------|
@@ -25,11 +25,16 @@ Tulis kode dengan kata kunci Banjar, jalankan via CLI seperti bahasa modern!
 | `tampaiakan`, `tampilkan`      | `console.log`  | Output ke terminal                 |
 
 
-## ⚙️ Instalasi
+## Instalasi
 
-**Prasyarat:** Node.js v18+
+**Syarat:** Node.js v18+
 
 ### Install global dari GitHub
 
 ```bash
 npm i -g github:jokobim12/banjarscript
+
+### Menjalankan Program
+jalankan pada terminal project
+```bash
+banjarscript nama_file
