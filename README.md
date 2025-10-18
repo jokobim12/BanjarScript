@@ -5,18 +5,25 @@ Tulis kode dengan kata kunci Banjar, jalankan via CLI seperti bahasa modern!
 
 ---
 
-## ✨ Fitur
+## 🧩 Daftar Kata Kunci BanjarScript
 
-- **Variabel:** `variabel`, `konstanta`
-- **Operator Boolean:** `dan`, `atau`, `bukan`
-- **If/Else:** `mun`, `lain`
-- **Loop:** `untuk`, `selagi`/`selama`
-- **String & Number:** (ikut sintaks JS)
-- **Fungsi:** `fungsi`, `balikan`
-- **Objek & Array:** (ikut sintaks JS)
-- **Output:** `tampaiakan(...)` (alias `tampilkan(...)`)
+| BanjarScript                   | JavaScript      | Keterangan                         |
+|--------------------------------|----------------|------------------------------------|
+| `wadah`, `variabel`, `ubah`    | `let`          | Variabel (boleh pilih salah satu)  |
+| `konstanta`                    | `const`        | Konstanta                          |
+| `fungsi`                       | `function`     | Definisi fungsi                    |
+| `balikan`, `bulikakan`         | `return`       | Mengembalikan nilai dari fungsi    |
+| `mun`                          | `if`           | Kondisi if                         |
+| `nanglain`, `lain`             | `else`         | Kondisi else                       |
+| `munkada`, `selagi`, `selama`  | `while`        | Perulangan while                   |
+| `gasan`                        | `for`          | Perulangan for                     |
+| `bujur`, `benar`               | `true`         | Boolean true                       |
+| `salah`                        | `false`        | Boolean false                      |
+| `dan`                          | `&&`           | Operator AND                       |
+| `atau`                         | `||`           | Operator OR                        |
+| `bukan`                        | `!`            | Operator NOT                       |
+| `tampaiakan`, `tampilkan`      | `console.log`  | Output ke terminal                 |
 
----
 
 ## ⚙️ Instalasi
 
