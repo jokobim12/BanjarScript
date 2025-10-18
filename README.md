@@ -34,7 +34,46 @@ Tulis kode dengan kata kunci Banjar, jalankan via CLI seperti bahasa modern!
 ```bash
 npm i -g github:jokobim12/banjarscript
 
-### Menjalankan Program
-jalankan pada terminal project
+```
+## Cara Menjalankan BanjarScript
+1. Buat file BanjarScript baru, misal coba.bjs
+2. Isi kode BanjarScript, contoh:
+```bash 
+tampaiakan("hello world")
+```
+3. Jalankan pada terminal project:
 ```bash
-banjarscript nama_file
+banjarscript coba.bjs
+```
+
+## Contoh Program
+```bash
+wadah angka = [1, 2, 3];
+fungsi cetakSemua(data) {
+  gasan (wadah i = 0; i < data.length; i = i + 1) {
+    tampaiakan("Data ke", i, "=", data[i]);
+  }
+}
+cetakSemua(angka);
+```
+
+## VS Code Support
+1. Syntax highlight dan icon file khusus untuk .bjs tersedia pada banjarscript-support
+2. Install extension VS Code secara manual dari folder banjarscript-support
+```bash
+cd banjarscript-support
+npm install
+```
+3. Jalankan VsCode, tekan f5 untuk membuka extensi
+
+
+## Kontribusi
+Saran, issue, dan pull request sangat diterima!
+- Fork repo ini
+- Buat branch baru
+- Ajukan pull request ke main
+
+## Lisensi
+MIT License
+(c) Joko Bimantaro
+
