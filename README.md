@@ -75,7 +75,29 @@ _(Lalu Reload/Restart VS Code kamu)_
 tampaiakan("Halo Dunia!");
 ```
 
-### 2. Sapa Kawan (Logika IF/ELSE)
+### 2. Perkenalan
+
+```javascript
+wadah data = {
+  nama: "Joko Bimantaro",
+  nim: "2401301001",
+  prodi: "Teknologi Informasi",
+  kampus: "Politeknik Negeri Tanah Laut",
+  semester: 3
+}
+
+fungsi tampaiData(info) {
+  tampaiakan("Nama: " + info.nama)
+  tampaiakan("NIM: " + info.nim)
+  tampaiakan("Program Studi: " + info.prodi)
+  tampaiakan("Kampus: " + info.kampus)
+  tampaiakan("Semester: " + info.semester)
+}
+
+tampaiData(data)
+```
+
+### 3. Sapa Kawan (Logika IF/ELSE)
 
 ```javascript
 // Status kesehatan: garing = salah (artinya tidak sakit / sehat)
