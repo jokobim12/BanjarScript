@@ -1,86 +1,99 @@
 # BanjarScript
 
-Bahasa pemrograman _eksperimental_ berbasis JavaScript.  
-Tulis kode dengan kata kunci Banjar, jalankan via CLI seperti bahasa modern!
+**Bahasa pemrograman eksperimental berbasis JavaScript dengan cita rasa Banjar.**  
+Tulis kode santai pakai bahasa Banjar, jalanin di mana aja!
 
----
+![BanjarScript Icon](banjarscript-support/banjarscript-icon.png)
 
-## Daftar Kata Kunci BanjarScript
+## 🚀 Instalasi & Persiapan
 
-| BanjarScript                  | JavaScript    | Keterangan                        |
-| ----------------------------- | ------------- | --------------------------------- | --- | ----------- |
-| `wadah`, `variabel`, `ubah`   | `let`         | Variabel (boleh pilih salah satu) |
-| `konstanta`                   | `const`       | Konstanta                         |
-| `fungsi`                      | `function`    | Definisi fungsi                   |
-| `balikan`, `bulikakan`        | `return`      | Mengembalikan nilai dari fungsi   |
-| `mun`                         | `if`          | Kondisi if                        |
-| `nanglain`, `lain`            | `else`        | Kondisi else                      |
-| `munkada`, `selagi`, `selama` | `while`       | Perulangan while                  |
-| `gasan`                       | `for`         | Perulangan for                    |
-| `bujur`, `benar`              | `true`        | Boolean true                      |
-| `salah`                       | `false`       | Boolean false                     |
-| `dan`                         | `&&`          | Operator AND                      |
-| `atau`                        | `             |                                   | `   | Operator OR |
-| `bukan`                       | `!`           | Operator NOT                      |
-| `tampaiakan`, `tampilkan`     | `console.log` | Output ke terminal                |
+Hanya butuh 2 langkah untuk memulai:
 
-## Instalasi
+### 1. Install BanjarScript (Global)
 
-**Syarat:** Node.js v18+
-
-### Install global dari GitHub
+Pastikan kamu sudah punya [Node.js](https://nodejs.org) (v18+). Lalu jalankan terminal:
 
 ```bash
 npm i -g github:jokobim12/banjarscript
-
 ```
 
-## Cara Menjalankan BanjarScript
+### 2. Setup VS Code (Warna & Icon)
 
-1. Buat file BanjarScript baru, misal coba.bjs
-2. Isi kode BanjarScript, contoh:
-
-```bash
-tampaiakan("hello world")
-```
-
-3. Jalankan pada terminal project:
-
-```bash
-banjarscript coba.bjs
-```
-
-## Contoh Program
-
-```bash
-wadah angka = [1, 2, 3];
-fungsi cetakSemua(data) {
-  gasan (wadah i = 0; i < data.length; i = i + 1) {
-    tampaiakan("Data ke", i, "=", data[i]);
-  }
-}
-cetakSemua(angka);
-```
-
-## VS Code Support
-
-3. Jalankan perintah berikut untuk mengaktifkan warna dan icon di VS Code:
+Agar ngoding lebih asik, kita perlu mengaktifkan ekstensi VS Code. Cukup ketik perintah ini di terminal mana saja:
 
 ```bash
 banjarscript setup
 ```
 
-4. Reload VS Code (Ctrl+R)
+_(Lalu Reload/Restart VS Code kamu)_
 
-## Kontribusi
+---
 
-Saran, issue, dan pull request sangat diterima!
+## 📖 Cara Pakai
 
-- Fork repo ini
-- Buat branch baru
-- Ajukan pull request ke main
+1. Buat file baru dengan akhiran `.bjs`, misalnya `coba.bjs`.
+2. Tulis kodemu (lihat kamus di bawah).
+3. Jalankan lewat terminal:
+   ```bash
+   banjarscript coba.bjs
+   ```
 
-## Lisensi
+---
 
-MIT License
+## 📚 Kamus Kata Kunci (Cheatsheet)
+
+| BanjarScript               | JavaScript    | Fungsi                            |
+| -------------------------- | ------------- | --------------------------------- | --- | -------------------- |
+| `wadah` / `variabel`       | `let`         | Bikin variabel baru               |
+| `konstanta`                | `const`       | Bikin nilai tetap (gabisa diubah) |
+| `fungsi`                   | `function`    | Bikin fungsi                      |
+| `tampaiakan` / `tampilkan` | `console.log` | Munculin tulisan di layar         |
+| `mun`                      | `if`          | Cek kondisi (kalau...)            |
+| `nanglain`                 | `else`        | Kalau tidak...                    |
+| `gasan`                    | `for`         | Perulangan (looping)              |
+| `selagi` / `munkada`       | `while`       | Ulangi selagi...                  |
+| `balikan` / `bulikakan`    | `return`      | Balikin nilai                     |
+| `bujur`                    | `true`        | Benar                             |
+| `salah`                    | `false`       | Salah                             |
+| `dan`                      | `&&`          | Operator logika DAN               |
+| `atau`                     | `             |                                   | `   | Operator logika ATAU |
+| `bukan`                    | `!`           | Operator TIDAK / Bukan            |
+
+---
+
+## 💻 Contoh Program
+
+### 1. Hello World
+
+```javascript
+tampaiakan("Halo Dunia!");
+```
+
+### 2. Sapa Kawan (Logika IF/ELSE)
+
+```javascript
+wadah kawanan = ["Udin", "Galuh", "Acil"];
+
+fungsi sapaKawan(daftarNama) {
+  gasan (wadah i = 0; i < daftarNama.length; i++) {
+    // Cek jika namanya Galuh
+    mun (daftarNama[i] == "Galuh") {
+      tampaiakan("Ui Galuh, pian bungas banar hari ini!");
+    } nanglain {
+      tampaiakan("Apa habar", daftarNama[i], "?");
+    }
+  }
+}
+
+sapaKawan(kawanan);
+```
+
+---
+
+## 🤝 Kontribusi
+
+Mau nambahin kosa kata baru? Atau nemu bug?
+Silakan **Fork** repository ini, edit, dan ajukan **Pull Request**!
+
+**Lisensi**: MIT License  
 (c) Joko Bimantaro
