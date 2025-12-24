@@ -42,10 +42,23 @@ if (args[0] === "setup" || args[0] === "setup-vscode") {
   
   const homeDir = process.env.HOME || process.env.USERPROFILE;
   const vscodeExtDir = path.join(homeDir, ".vscode", "extensions");
-  const targetDir = path.join(vscodeExtDir, "jokobim.banjarscript-support-0.0.1");
   
   // Source folder is sibling to 'bin' -> '../banjarscript-support'
   const sourceDir = path.resolve(__dirname, "..", "banjarscript-support");
+
+  // Read package.json to get version
+  const pkgPath = path.join(sourceDir, "package.json");
+  let version = "0.0.1";
+  if (fs.existsSync(pkgPath)) {
+    try {
+      const pkg = JSON.parse(fs.readFileSync(pkgPath, "utf-8"));
+      version = pkg.version || "0.0.1";
+    } catch (e) {
+      console.warn("⚠️  Gagal membaca versi, menggunakan default 0.0.1");
+    }
+  }
+
+  const targetDir = path.join(vscodeExtDir, `jokobim.banjarscript-support-${version}`);
 
   if (!fs.existsSync(sourceDir)) {
     console.error("❌ Error: Folder banjarscript-support tidak ditemukan dalam paket ini.");
@@ -53,9 +66,15 @@ if (args[0] === "setup" || args[0] === "setup-vscode") {
   }
 
   try {
-    // Clean old install
-    if (fs.existsSync(targetDir)) {
-      fs.rmSync(targetDir, { recursive: true, force: true });
+    // Clean old installs (remove any jokobim.banjarscript-support-*)
+    if (fs.existsSync(vscodeExtDir)) {
+      const extensions = fs.readdirSync(vscodeExtDir);
+      extensions.forEach(ext => {
+        if (ext.startsWith("jokobim.banjarscript-support-")) {
+            console.log(`🗑️  Menghapus versi lama: ${ext}`);
+          fs.rmSync(path.join(vscodeExtDir, ext), { recursive: true, force: true });
+        }
+      });
     }
     
     // Copy new files
