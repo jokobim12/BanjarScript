@@ -13,8 +13,14 @@ Hanya butuh 2 langkah untuk memulai:
 
 Pastikan kamu sudah punya [Node.js](https://nodejs.org) (v18+). Lalu jalankan terminal:
 
+Windows:
 ```bash
 npm i -g github:jokobim12/banjarscript
+```
+
+MacOS/Linux:
+```bash
+sudo npm i -g github:jokobim12/banjarscript
 ```
 
 ### 2. Setup VS Code (Warna & Icon)
