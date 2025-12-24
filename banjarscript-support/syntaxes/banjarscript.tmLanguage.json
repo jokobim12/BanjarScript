@@ -4,26 +4,64 @@
   "scopeName": "source.banjarscript",
   "patterns": [
     {
-      "name": "keyword.control.banjarscript",
-      "match": "\\b(wadah|konstanta|fungsi|balikan|bulikakan|mun|nanglain|gasan|munkada|selagi|bujur|salah|dan|atau|bukan|tampaiakan|tampilkan)\\b"
+      "name": "comment.line.double-slash.banjarscript",
+      "begin": "//",
+      "end": "$"
     },
     {
       "name": "string.quoted.double.banjarscript",
       "begin": "\"",
-      "end": "\""
+      "end": "\"",
+      "patterns": [
+        {
+          "name": "constant.character.escape.banjarscript",
+          "match": "\\\\."
+        }
+      ]
+    },
+    {
+      "name": "storage.type.banjarscript",
+      "match": "\\b(wadah|variabel|ubah|konstanta)\\b"
+    },
+    {
+      "name": "storage.type.function.banjarscript",
+      "match": "\\b(fungsi)\\b"
+    },
+    {
+      "name": "keyword.control.banjarscript",
+      "match": "\\b(mun|nanglain|lain|gasan|munkada|selagi|selama|balikan|bulikakan)\\b"
+    },
+    {
+      "name": "constant.language.boolean.banjarscript",
+      "match": "\\b(bujur|benar|salah)\\b"
+    },
+    {
+      "name": "keyword.operator.banjarscript",
+      "match": "\\b(dan|atau|bukan)\\b"
+    },
+    {
+      "name": "support.function.banjarscript",
+      "match": "\\b(tampaiakan|tampilkan)\\b"
     },
     {
       "name": "constant.numeric.banjarscript",
       "match": "\\b\\d+(\\.\\d+)?\\b"
     },
     {
-      "name": "comment.line.double-slash.banjarscript",
-      "begin": "//",
-      "end": "$"
-    },
-    {
       "name": "entity.name.function.banjarscript",
       "match": "\\b([a-zA-Z_][a-zA-Z0-9_]*)\\s*(?=\\()"
+    },
+    {
+      "name": "keyword.operator.assignment.banjarscript",
+      "match": "="
+    },
+    {
+      "name": "keyword.operator.arithmetic.banjarscript",
+      "match": "\\+|-|\\*|/"
+    },
+    {
+      "name": "keyword.operator.comparison.banjarscript",
+      "match": "==|!=|<=|>=|<|>"
     }
   ]
 }
