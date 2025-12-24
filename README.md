@@ -43,7 +43,7 @@ _(Lalu Reload/Restart VS Code kamu)_
 ## 📚 Kamus Kata Kunci (Cheatsheet)
 
 | BanjarScript               | JavaScript    | Fungsi                            |
-| -------------------------- | ------------- | --------------------------------- | --- | -------------------- |
+| -------------------------- | ------------- | --------------------------------- |
 | `wadah` / `variabel`       | `let`         | Bikin variabel baru               |
 | `konstanta`                | `const`       | Bikin nilai tetap (gabisa diubah) |
 | `fungsi`                   | `function`    | Bikin fungsi                      |
@@ -56,7 +56,7 @@ _(Lalu Reload/Restart VS Code kamu)_
 | `bujur`                    | `true`        | Benar                             |
 | `salah`                    | `false`       | Salah                             |
 | `dan`                      | `&&`          | Operator logika DAN               |
-| `atau`                     | `             |                                   | `   | Operator logika ATAU |
+| `atau`                     | `\|\|`        | Operator logika ATAU              |
 | `bukan`                    | `!`           | Operator TIDAK / Bukan            |
 
 ---
