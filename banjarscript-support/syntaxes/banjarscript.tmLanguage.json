@@ -33,7 +33,7 @@
     },
     {
       "name": "constant.language.boolean.banjarscript",
-      "match": "\\b(bujur|benar|salah)\\b"
+      "match": "\\b(bujur|benar|bungul)\\b"
     },
     {
       "name": "keyword.operator.banjarscript",

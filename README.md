@@ -54,7 +54,7 @@ _(Lalu Reload/Restart VS Code kamu)_
 | `selagi` / `munkada`       | `while`       | Ulangi selagi...                  |
 | `balikan` / `bulikakan`    | `return`      | Balikin nilai                     |
 | `bujur`                    | `true`        | Benar                             |
-| `salah`                    | `false`       | Salah                             |
+| `bungul`                   | `false`       | Salah                             |
 | `dan`                      | `&&`          | Operator logika DAN               |
 | `atau`                     | `\|\|`        | Operator logika ATAU              |
 | `bukan`                    | `!`           | Operator TIDAK / Bukan            |
@@ -74,13 +74,13 @@ tampaiakan("Halo Dunia!");
 ```javascript
 wadah kawanan = ["Udin", "Galuh", "Acil"];
 
+// Cek status, misalnya: habisBala = bungul (false)
+wadah habisBala = bungul;
+
 fungsi sapaKawan(daftarNama) {
   gasan (wadah i = 0; i < daftarNama.length; i++) {
-    // Cek jika namanya Galuh
-    mun (daftarNama[i] == "Galuh") {
-      tampaiakan("Ui Galuh, pian bungas banar hari ini!");
-    } nanglain {
-      tampaiakan("Apa habar", daftarNama[i], "?");
+    mun (habisBala == bungul) {
+       tampaiakan("Ui", daftarNama[i], "sehat kah?");
     }
   }
 }
