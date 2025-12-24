@@ -54,7 +54,7 @@ _(Lalu Reload/Restart VS Code kamu)_
 | `selagi` / `munkada`       | `while`       | Ulangi selagi...                  |
 | `balikan` / `bulikakan`    | `return`      | Balikin nilai                     |
 | `bujur`                    | `true`        | Benar                             |
-| `bungul`                   | `false`       | Salah                             |
+| `salah`                    | `false`       | Salah                             |
 | `dan`                      | `&&`          | Operator logika DAN               |
 | `atau`                     | `\|\|`        | Operator logika ATAU              |
 | `bukan`                    | `!`           | Operator TIDAK / Bukan            |
@@ -72,20 +72,22 @@ tampaiakan("Halo Dunia!");
 ### 2. Sapa Kawan (Logika IF/ELSE)
 
 ```javascript
+// Status kesehatan: garing = salah (artinya tidak sakit / sehat)
+wadah garing = salah;
 wadah kawanan = ["Udin", "Galuh", "Acil"];
 
-// Cek status, misalnya: habisBala = bungul (false)
-wadah habisBala = bungul;
-
-fungsi sapaKawan(daftarNama) {
+fungsi cekKesehatan(daftarNama) {
   gasan (wadah i = 0; i < daftarNama.length; i++) {
-    mun (habisBala == bungul) {
-       tampaiakan("Ui", daftarNama[i], "sehat kah?");
+    // Jika garing == salah (artinya sehat)
+    mun (garing == salah) {
+       tampaiakan(daftarNama[i], "Alhamdulillah, sehat walafiat!");
+    } nanglain {
+       tampaiakan(daftarNama[i], "Syafakallah, lekas sembuh lah...");
     }
   }
 }
 
-sapaKawan(kawanan);
+cekKesehatan(kawanan);
 ```
 
 ---
