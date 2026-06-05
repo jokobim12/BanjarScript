@@ -10,7 +10,7 @@ const __filename = url.fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 function printHelp() {
-  console.log(`BanjarScript CLI\n\nUsage:\n  banjarscript <file.bjs>            Jalankan file BanjarScript\n  banjarscript --emit-js <file.bjs>   Keluarkan JavaScript hasil transpile ke stdout\n  banjarscript setup                  Install ekstensi VS Code otomatis\n  banjarscript --help                 Tampilkan bantuan\n`);
+  console.log(`BanjarScript CLI\n\nUsage:\n  banjarscript <file.bjs>            Jalankan file BanjarScript\n  banjarscript --emit-js <file.bjs>   Keluarkan JavaScript hasil transpile ke stdout\n  banjarscript build <file.bjs>       Build ke file .js untuk dipakai di HTML\n  banjarscript setup                  Install ekstensi VS Code otomatis\n  banjarscript --help                 Tampilkan bantuan\n`);
 }
 
 
@@ -89,6 +89,26 @@ if (args[0] === "setup" || args[0] === "setup-vscode") {
     process.exit(1);
   }
   
+  process.exit(0);
+}
+
+// Handle Build Command
+if (args[0] === "build") {
+  const buildFile = args[1];
+  if (!buildFile) {
+    console.error("Error: Tentukan file .bjs. Contoh: banjarscript build coba.bjs");
+    process.exit(1);
+  }
+  const buildAbs = path.resolve(process.cwd(), buildFile);
+  if (!fs.existsSync(buildAbs)) {
+    console.error(`Error: File tidak ada -> ${buildAbs}`);
+    process.exit(1);
+  }
+  const buildSrc = fs.readFileSync(buildAbs, "utf-8");
+  const buildJs = transpileBanjar(buildSrc, { filename: path.basename(buildFile) });
+  const outFile = buildAbs.replace(/\.bjs$/, ".js");
+  fs.writeFileSync(outFile, buildJs, "utf-8");
+  console.log(`✅ Berhasil! File siap dipakai di HTML: ${path.basename(outFile)}`);
   process.exit(0);
 }
 

@@ -1,0 +1,19 @@
+wadah tombol = ambilElemenBedasarkanId("btnKirim");
+wadah kotak = pilihElemenLawanSelektor(".kotak");
+wadah pesan = ambilElemenBedasarkanId("pesan");
+
+wadah sudahDiklik = salah;
+
+tombol.tambahPangdangarKajadian("click", fungsi() {
+  mun (sudahDiklik == salah) {
+    kotak.tambahKelasDiElemen("aktif");
+    kotak.ubahTeksElemen = "Alhamdulillah, aktif!";
+    pesan.ubahTeksElemen = "Tombol sudah diklik!";
+    sudahDiklik = bujur;
+  } nanglain {
+    kotak.hapusKelasDiElemen("aktif");
+    kotak.ubahTeksElemen = "Ini kotaknya";
+    pesan.ubahTeksElemen = "Klik lagi untuk mengaktifkan.";
+    sudahDiklik = salah;
+  }
+});

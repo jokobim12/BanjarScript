@@ -1,0 +1,40 @@
+// Contoh penggunaan barisan (array) di BanjarScript
+
+wadah buah = barisan["mangga", "rambutan", "durian"];
+
+// tambahDiHujung - push
+buah.tambahDiHujung("pisang");
+tampaiakan("Setelah tambah di hujung:", buah);
+
+// ambilDiHujung - pop
+wadah terakhir = buah.ambilDiHujung();
+tampaiakan("Diambil dari hujung:", terakhir);
+
+// tambahDiAwal - unshift
+buah.tambahDiAwal("nanas");
+tampaiakan("Setelah tambah di awal:", buah);
+
+// ambilDiAwal - shift
+wadah pertama = buah.ambilDiAwal();
+tampaiakan("Diambil dari awal:", pertama);
+
+// jumlahIsi - length
+tampaiakan("Jumlah isi barisan:", buah.jumlahIsi);
+
+// cariPosisi - indexOf
+tampaiakan("Posisi 'durian':", buah.cariPosisi("durian"));
+
+// adaKah - includes
+tampaiakan("Ada 'mangga'?", buah.adaKah("mangga"));
+
+// ambilSebagian - slice
+wadah sebagian = buah.ambilSebagian(0, 2);
+tampaiakan("Sebagian barisan:", sebagian);
+
+// ubahDiTengah - splice
+buah.ubahDiTengah(1, 1, "kelapa");
+tampaiakan("Setelah ubah di tengah:", buah);
+
+// gabungJadiTulisan - join
+wadah teks = buah.gabungJadiTulisan(", ");
+tampaiakan("Digabung jadi tulisan:", teks);
